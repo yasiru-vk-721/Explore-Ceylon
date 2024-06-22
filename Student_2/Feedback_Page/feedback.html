@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Feedback_Page/feedback.css">
+    <link rel="stylesheet" href="../Main_Page/navbarfooter.css">
+    <title>Explore Ceylon</title>
+</head>
+<body>
+    <header id="header">
+        <!-- Navigation bar section -->
+        <nav id="nav">
+            <img class="logo" src="../images/ExploreCeylonLogo.png" alt="ExploreCeylonLogo">
+            <ul>
+            <li><a href="../../Student_2/Main_Page/main.html" >Home</a>
+            </li>
+            <li><a href="../../Student_1/Buy_Products/buyProducts.html">Shop</a></li>
+            <li><a href="../../Student_4/image_gallery/Image-gallery.html">Gallery</a></li>
+            <li><a href="../../Student_2/Feedback_Page/feedback.html" style="text-decoration: underline; color:rgb(96, 176, 190);">Comments</a></li>
+            <li><a href="../../Student_3/quiz/quiz.html">Quiz</a></li>
+            <li><a href="../../Student_4/sitemap/Sitemap.html">Sitemap</a></li>
+            <li><a href="../../Student_3/member_page/AboutUs.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Banner section -->
+    <div class="banner">
+        <div class="banner-title">
+            <h1>F e e d b a c k</h1>
+            <h3>Give us your experience with us.</h3>
+        </div>
+    </div>
+    
+    <hr>
+
+    <!-- Feedback Form section -->
+    <form id="feedbackForm" onsubmit="submitForm(); return false;">
+        <div class="comment" >
+            <!-- Full Name input fields -->
+            <p class="question"><label>Full Name : </label></p>
+            <input type="text" name="name" id="fname" placeholder="First Name" required>
+            <input type="text" name="name" id="lname" placeholder="Last Name" required>
+            <br>
+            <!-- Birthday input field -->
+            <p class="question"><label>Birthday : </label></p>
+            <input type="date">
+            <br><br><br><br><br>
+        </div>
+        <br>
+        <!-- Rating input section -->
+        <div class="comment1">
+            <p class="question"><label>How would you rate your overall experience with our website today? On a scale of 0 to 10, where 0 signifies extremely dissatisfied and 10 indicates extremely satisfied.</label></p><br>
+            <input class="rating-range" type="range" value="4" min="1" max="10" oninput="this.nextElementSibling.value = this.value">
+            <output>4</output>
+        </div>
+        <br>
+        <!-- Reasons for the rating input section -->
+        <div class="comment1">
+            <p class="question"><label>Please tell us, what are the reasons for giving this rating to us.</label></p><br>
+            <textarea name="reason" id="reasons" placeholder="Enter your reasons here..." required></textarea>
+            <br><br>
+        </div>
+        <br>
+        <!-- Preferred Method of Completion input section -->
+        <div class="comment1">
+            <p class="question"><label>How did you want to complete this task today.</label></p><br>
+            <select name="list" id="list1" style="width: 700px; height: 40px;">
+                <option disabled selected>- - - - - - Please Select - - - - - -</option>
+                <option value="Phone">Phone</option>
+                <option value="Web Site">Web Site</option>
+                <option value="Web Chat">Web Chat</option>
+                <option value="Social Media">Social Media</option>
+                <option value="Email">Email</option>
+            </select>
+            <br><br>
+        </div>
+        <br>
+        <!-- Preferred Method of Completion (if task is done again) input section -->
+        <div class="comment1">
+            <p class="question"><label>If you had to complete this task again, how would you prefer to do it?</label></p><br>
+            <select name="list" id="list2" style="width: 700px; height: 40px;">
+                <option disabled selected>- - - - - - Please Select - - - - - -</option>
+                <option value="Phone">Phone</option>
+                <option value="Web Site">Web Site</option>
+                <option value="Web Chat">Web Chat</option>
+                <option value="Social Media">Social Media</option>
+                <option value="Email">Email</option>
+            </select>
+            <br><br>
+        </div>
+        <br>
+        <!-- How You Found Us input section -->
+        <div class="comment1">
+            <p class="question"><label>How did you find us?</label></p><br>
+            <select name="list" id="list3" style="width: 700px; height: 40px;">
+                <option disabled selected>- - - - - - Please Select - - - - - -</option>
+                <option value="Advertisement">Advertisement</option>
+                <option value="Person">Person/Friend</option>
+                <option value="Web Chat">Web Chat</option>
+                <option value="Social Media">Social Media</option>
+                <option value="Email">Email</option>
+            </select>
+            <br><br>
+        </div>
+        <br>
+        <!-- Additional Comments input section -->
+        <div class="comment1">
+            <p class="question"><label>Please leave any additional questions or comments to help us improve.</label></p><br>
+            <textarea name="comments" id="comments" placeholder="Enter your comments here..."></textarea>
+            <br><br>
+        </div>
+        <div id="submit">
+            <!-- Submit button -->
+            <input type="submit" name="button" value="SUBMIT" id="submitbtn">
+        </div>
+    </form>
+
+    <!-- Javascript code for handling form submission and redirection -->
+    <script>
+        function submitForm() {
+          // Get the form data
+          var formData = new FormData(document.getElementById("feedbackForm"));
+          var fullName = formData.get("fname") + " " + formData.get("lname");
+          var rating = formData.get("rating");
+          var reasons = formData.get("reasons");
+          var methodlist = formData.get("methodlist");
+          var methodlistAgain = formData.get("methodlistAgain");
+          var findus = formData.get("findus");
+          var additionalComments = formData.get("additionalComments");
+      
+          // Construct the email body
+          var body =
+            "Full Name: " + fullName +
+            "\nRating: " + rating +
+            "\nReasons: " + reasons +
+            "\nPreferred Method of Completion: " + methodlist +
+            "\nPreferred Method of Completion (if task is done again): " + methodlistAgain +
+            "\nHow You Found Us: " + findus +
+            "\nAdditional Comments: " + additionalComments;
+      
+          // Replace the email address below with the recipient's email
+          var email = "viduthyasiru0107@gmail.com";
+          var subject = "Feedback Submission";
+      
+          // Construct the mailto URL
+          var mailtoURL = "mailto:" + email + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+      
+          // Open the email client with the mailto URL
+          window.open(mailtoURL);
+      
+          // Redirect to the thank-you page after a short delay (adjust the delay as needed)
+          setTimeout(function () {
+            window.location.href = "thankyou.html";
+          }, 1000); // Delay in milliseconds
+        }
+    </script>
+
+    <br><br><br>
+
+    <!-- Back to Top button -->
+    <img class="backtoTop" src="../images/up-arrow.png" alt="up-arrow">
+
+    <br><br><br>
+
+    <!-- Footer section -->
+    <footer>
+        <div class="footer-section">
+            <div>
+                <div class="logo-icon">
+                    <img src="../images/ExploreCeylonLogo.png" alt="ExploreCeyloanLogo">
+                </div>
+            </div>
+            <div class="editors">
+                <p><a href="../pageeditor/yasirukatuwandeniya.html">Page Editor - Yasiru Katuwandeniya</a></p>
+                <p>Designed by Web Master Team</p>
+                <p>&copy; Explore Ceylon Ltd. 2023 All right reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript code for Back to Top functionality -->
+    <script src="../path/to/backtoTop.js"></script>
+
+    <!-- JavaScript code for sticky navigation -->
+    <script>
+        window.onscroll = function() {myFunction()};
+
+        var nav = document.getElementById("nav");
+
+        var sticky = nav.offsetTop;
+
+        function myFunction() {
+          if (window.pageYOffset >= sticky) {
+            nav.classList.add("sticky")
+          } else {
+            nav.classList.remove("sticky");
+          }
+        }
+    </script>
+</body>
+</html>

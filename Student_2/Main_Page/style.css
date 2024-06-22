@@ -1,0 +1,229 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+
+
+.slider{
+    margin-left: 135px;
+    margin-top: 80px;
+    width:1250px;
+    height:650px;
+    border-radius:3px;
+    overflow: hidden;
+}
+.slides{
+    width:100%;
+    height:500px;
+    display:flex;
+}
+.slides input{
+    display:none;
+}
+
+.slide{
+    transition:2s;
+}
+
+.navigation-manual{
+    position:absolute;
+    width: 1300px;
+    margin-top: 0px;
+    display:flex;
+    justify-content: center;
+}
+.manual-btn{
+   border:2px solid #ffffff;
+   padding:5px;
+   border-radius:10px;
+   cursor: pointer;
+   transition: 1s;    
+}
+.manual-btn:not(:last-child){
+    margin-right: 40px;
+}
+
+.manual-btn:hover{
+    background: #ffffff;
+}
+
+#radio1:checked ~ .first{
+    margin-left:-0%;
+}
+#radio2:checked ~ .first{
+    margin-left:-100%;
+}
+#radio3:checked ~ .first{
+    margin-left:-200%;
+}
+
+.navigation-auto{
+    position:absolute;
+    display:flex;
+    width:1300px;
+    justify-content: center;
+    margin-top:500px;
+}
+.navigation-auto div{
+    border:2px solid #ffffff;
+    padding:5px;
+    border-radius:10px;
+    transition:0.5s;
+}
+.navigation-auto div:not(:last-child){
+    margin-right:40px;
+}
+#radio1:checked ~ .navigation-auto .auto-btn1{
+    background: #ffffff;
+}
+#radio2:checked ~ .navigation-auto .auto-btn2{
+    background: #f8f8f8;
+}
+#radio3:checked ~ .navigation-auto .auto-btn3{
+    background: #ffffff;
+}
+
+
+
+.slider .slides .slide .info{
+    position:absolute;
+    top:0;
+    padding: 100px 30px;
+}
+@media only screen and (max-width: 769px) {
+    .slider .slides {
+        flex-direction: column;
+    }
+    .slider .slides .slide {
+        width: 100%;
+    }
+}
+
+.culture {
+    background-image: url(../Images/Culture.jpg);
+    width: 500px;
+    height: 334px;
+    background-size:contain;
+    background-repeat: no-repeat;
+    float: left;
+    margin-left: 200px;
+    border: 10px double black;
+    
+}
+
+.culture-title{
+    font-size: 35px;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #f8f8f8;
+    text-align: center;
+    padding-top: 145px;
+    padding-bottom: 120px;
+}
+
+.destinations {
+    background-image: url(../Images/Destination.jpg);
+    width: 500px;
+    height: 334px;
+    background-size:contain;
+    background-repeat: no-repeat;
+    float: left;
+    margin-right: 200px;
+    margin-left: 50px;
+    border: 10px double black;
+}
+
+.destinations-title{
+    font-size: 35px;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #f8f8f8;
+    text-align: center;
+    padding-top: 145px;
+    padding-bottom: 120px;
+
+}
+
+.foods{
+    background-image: url(../Images/Foods.jpg);
+    width: 500px;
+    height: 334px;
+    background-size:cover;
+    background-repeat: no-repeat;
+    float: right;
+    margin-right: 200px;
+    border: 10px double black;
+    margin-top: 50px;
+    margin-right: 230px;
+}
+
+
+
+
+.foods-title{
+    font-size: 35px;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #f8f8f8;
+    text-align: center;
+    padding-top: 145px;
+    padding-bottom: 120px;
+
+}
+
+.transport{
+    background-image: url(../Images/Transport.jpg);
+    width: 500px;
+    height: 334px;
+    background-size:cover;
+    background-repeat: no-repeat;
+    float: left;
+    margin-left: 200px;
+    margin-top: 50px;
+    border: 10px double black;
+}
+
+.transport-title{
+    font-size: 35px;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #f8f8f8;
+    text-align: center;
+    padding-top: 145px;
+    padding-bottom: 120px;
+}
+
+.foods:hover{
+    transform: scale(1.1);
+    transition: 0.6s;
+}
+
+.transport:hover{
+    transform: scale(1.1);
+    transition: 0.6s;
+}
+
+.destinations:hover{
+    transform: scale(1.1);
+    transition: 0.6s;
+}
+
+.culture:hover{
+    transform: scale(1.1);
+    transition: 0.6s;
+}
+
+
+
+
+
+
+

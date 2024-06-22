@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Ceylon</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="navbarfooter.css">
+</head>
+
+<body>
+    <!-- Header section containing the website logo and navigation menu -->
+    <header id="header">
+        <nav id="nav">
+            <img class="logo" src="../images/ExploreCeylonLogo.png"  alt="ExploreCeylonLogo">
+            <ul>
+                <li><a href="../../Student_2/Main_Page/main.html" style="text-decoration: underline; color:rgb(96, 176, 190);">Home</a>
+                </li>
+                <li><a href="../../Student_1/Buy_Products/buyProducts.html">Shop</a></li>
+                <li><a href="../../Student_4/image_gallery/Image-gallery.html">Gallery</a></li>
+                <li><a href="../../Student_2/Feedback_Page/feedback.html">Comments</a></li>
+                <li><a href="../../Student_3/quiz/quiz.html">Quiz</a></li>
+                <li><a href="../../Student_4/sitemap/Sitemap.html">Sitemap</a></li>
+                <li><a href="../../Student_3/member_page/AboutUs.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Slider section with automatic image slider -->
+    <div class="slider">
+        <div class="slides">
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+
+            <div class="slide first">
+                <img src="../images/1.jpg" alt="temple of tooth image" style="height:725px; width:1250px;">
+                <div class="info">
+                    <p style="padding-top: 20px; font-size: 20px;"></p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="../images/2.jpg" alt="" style="height:725px; width:1250px;">
+            </div>
+            <div class="slide">
+                <img src="../images/3.jpg" alt="" style="height:725px; width:1250px;">
+            </div>
+
+            <!-- Automatic navigation buttons for the slider -->
+            <div class="navigation-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+            </div>
+        </div>
+        <!-- Manual navigation buttons for the slider -->
+        <div class="navigation-manual">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+        </div>
+    </div>
+
+    <!-- Empty space for separation -->
+    <br><br><br><br><br>
+
+    <!-- Image slider script -->
+    <script>
+        var counter = 1;
+        setInterval(function(){
+            document.getElementById('radio' + counter).checked = true;
+            counter++;
+            if (counter > 3) { 
+                counter = 1;
+            }
+        }, 5000);
+    </script>
+
+    <!-- Section for Culture content -->
+    <div class="culture">
+        <div class="culture-title">
+            <a href="../../Student_1/Additional_page/contentPage.html" style="color: aliceblue; font-size: 60px; font-weight: bold;">Culture</a>
+        </div>
+    </div>
+ 
+    <!-- Section for Destinations content -->
+    <div class="destinations">
+        <div class="destinations-title">
+            <a href="../../Student_3/Additional_page/destination.html" style="color: aliceblue; font-size: 60px; font-weight: bold;">Destinations</a>
+        </div>
+    </div>
+
+    <!-- Section for Foods content -->
+    <div class="foods">
+        <div class="foods-title">
+            <a href="../../Student_4/food_items/FoodItems.html" style="color: aliceblue; font-size: 60px; font-weight: bold;">Foods</a>
+        </div>
+    </div>
+
+    <!-- Section for Transportation content -->
+    <div class="transport">
+        <div class="transport-title">
+            <a href="../../Student_2/Transportation_Page/transportation.html" style="color: aliceblue; font-size: 60px; font-weight: bold;">Transportations</a>
+        </div>
+    </div>
+
+    <!-- Image for the back-to-top button -->
+    <img class="backtoTop" src="../images/up-arrow.png" alt="up-arrow" >
+    
+    <!-- Empty space for separation -->
+    <br><br><br>
+
+    <!-- Footer section with website information -->
+    <footer>
+        <div class="footer-section">
+            <div>
+                <div class="logo-icon">
+                    <img src="../images/ExploreCeylonLogo.png" alt="ExploreCeyloanLogo">
+                </div>
+            </div>
+            <div class="editors">
+                <p><a href="../pageeditor/yasirukatuwandeniya.html">Page Editor - Yasiru Katuwandeniya</a></p>
+                <p>Designed by Web Master Team</p>
+                <p>&copy; Explore Ceylon Ltd. 2023 All right reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script for the back-to-top button -->
+    <script src="../path/to/backtoTop.js"></script>
+      
+    <!-- Script for sticky navigation -->
+    <script>
+        window.onscroll = function() {myFunction()};
+
+        var nav = document.getElementById("nav");
+        var sticky = nav.offsetTop;
+
+        function myFunction() {
+          if (window.pageYOffset >= sticky) {
+            nav.classList.add("sticky")
+          } else {
+            nav.classList.remove("sticky");
+          }
+        }
+    </script>
+</body>
+</html>

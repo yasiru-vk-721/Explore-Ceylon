@@ -1,0 +1,155 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+
+.banner{
+    background-image: url(../Images/FeedbackCover.jpg);
+    width: 100%;
+    height: 150px;
+    margin-top: 0px;
+}
+
+.banner-title h1{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 60px;
+    color: aliceblue;
+    margin-left: 580px;
+    padding-top: 20px;
+    margin-top: 100px;
+}
+
+.banner-title h3{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 27px;
+    color: aliceblue;
+    margin-left: 568px;
+    
+}
+
+
+
+.comment1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px; 
+    width: 60%;
+    margin-left: 320px;
+    margin-right: 320px;
+    background-color: rgb(239, 239, 239);
+    border-radius: 10px;
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.8);
+}
+
+.comment{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px; 
+    width: 60%;
+    margin-left: 320px;
+    margin-right: 320px;
+    background-color: rgb(239, 239, 239);
+    border-radius: 10px;
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.8);
+}
+
+.comment1 p , .comment p{
+    font-size: 18px;
+    font-weight: bold;
+
+}
+
+.comment input[name="name"] , .comment input[name="bday"]{
+    width: 200px;
+    height: 20px;
+    font-size: 15px;
+    margin-left: 20px;
+}
+
+.comment1 #reasons{
+    font-size: 15px;
+    width: 700px;
+    height: 100px;
+}
+
+.comment1 input[name="methodlist"]{
+    width: 700px;
+    height: 40px;
+    font-size: 15px;
+}
+
+.comment1 input[name="methodlist"]:hover , .comment1 textarea[name="reason"]:hover, .comments textarea[name="rcomments"]:hover , .comment input[name="name"]:hover , .comment input[name="bday"]:hover{
+    border: 2px solid rgb(0, 166, 255);
+    transition: 0.1s;
+}
+
+#comments{
+    font-size: 15px;
+    width: 700px;
+    height: 100px;
+}
+
+#submit input{
+    width: 150px;
+    height: 40px;
+    background-color: rgb(66, 70, 175);
+    color: aliceblue;
+    margin-top: 70px;
+    margin-left: 700px;
+    margin-right: 700px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    
+}
+
+#submit input[type="submit"]:hover {
+    background-color: #ca73d2;
+    color: rgb(0, 0, 0);
+    transition: 0.5s;
+}
+
+
+
+
+.question{
+    font-size: 17px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    
+}
+
+.rating-range {
+    width: 70%;
+    margin-left: 100px;  
+    margin-top: 10px; 
+}
+
+output{
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-bottom: 5px;
+    border: 5px double rgb(0, 7, 76);
+    border-radius: 1px;
+    
+}
+
+
+
+
+
+

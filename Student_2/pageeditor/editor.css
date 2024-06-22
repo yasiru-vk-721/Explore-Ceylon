@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+
+
+}
+
+.container {
+    text-align: center;
+    background-color: rgb(238, 87, 87);
+    height: 60px;
+}
+
+.container,.container2,.container3,hr{
+    width: 900px;
+    margin-left: 300px;
+    margin-right: 300px;
+}
+
+.container2 {
+    text-align: center; 
+
+}
+
+.container h1{
+    font-size: 40px;
+    padding-top: 5px;
+}
+
+.container2 p{
+    font-size: 20px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.container3{
+    text-align: center;
+    background-color: rgb(211, 165, 214);
+}

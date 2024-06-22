@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Ceylon</title>
+    <link rel="stylesheet" href="../Main_Page/navbarfooter.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-decoration: none;
+        }
+        body{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        /* Styling for the thanking section */
+        .thanking{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 50%;
+            height: 250px;
+            margin-left: 400px;
+            margin-top: 100px;
+            text-align: left;
+            /* Adding box shadow and border radius to the thanking section */
+            box-shadow: 0 2px 10px black;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- Navigation bar section -->
+        <nav id="nav">
+            <img class="logo" src="../images/ExploreCeylonLogo.png" alt="ExploreCeylonLogo">
+            <ul>
+                <li><a href="../../Student_2/Main_Page/main.html">Home</a>
+                </li>
+                <li><a href="../../Student_1/Buy_Products/buyProducts.html">Shop</a></li>
+                <li><a href="../../Student_4/image_gallery/Image-gallery.html">Gallery</a></li>
+                <li><a href="../../Student_2/Feedback_Page/feedback.html"
+                        style="text-decoration: underline; color:rgb(96, 176, 190);">Comments</a></li>
+                <li><a href="../../Student_3/quiz/quiz.html">Quiz</a></li>
+                <li><a href="../../Student_4/sitemap/Sitemap.html">Sitemap</a></li>
+                <li><a href="../../Student_3/member_page/AboutUs.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <br><br><br><br>
+
+    <!-- Thanking section -->
+    <div class="thanking">
+        <p style="color: rgb(0, 9, 170); font-size: 50px;"><b>Thank You.!</b></p>
+        <p style="font-size: 20px;"><i>Thank you for taking the time to give us your experience today.</i></p>
+    </div>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+
+    <!-- Footer section -->
+    <footer>
+        <div class="footer-section">
+            <div>
+                <div class="logo-icon">
+                    <img src="../images/ExploreCeylonLogo.png" alt="ExploreCeylonLogo">
+                </div>
+            </div>
+            <div class="editors">
+                <p><a href="../pageeditor/yasirukatuwandeniya.html">Page editor - Yasiru Katuwandeniya</a></p>
+                <p>Designed by Web Master Team</p>
+                <p>&copy; Explore Ceylon Ltd. 2023 All right reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Javascript code for sticky navigation -->
+    <script>
+        window.onscroll = function() {myFunction()};
+
+        var nav = document.getElementById("nav");
+
+        var sticky = nav.offsetTop;
+
+        function myFunction() {
+          if (window.pageYOffset >= sticky) {
+            nav.classList.add("sticky")
+          } else {
+            nav.classList.remove("sticky");
+          }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+nav{
+    height: 80px;
+    background-color:rgb(6, 0, 68);
+    z-index: 100;
+}
+
+nav ul{
+    float: right;
+    margin-right:25px;
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 15px;    
+}
+
+.logo{
+    margin-left: 40px;
+    margin-top: -65px;
+    width: 200px;
+    height: 200px;
+    
+}
+
+
+nav ul  li a{
+    position: relative;
+    font-size: 18px;
+    border-width: 2px;
+    border-radius: 5px;
+    padding: 5px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-transform: uppercase;
+    color: rgb(249, 249, 249);
+}
+
+nav ul li a::before{
+    position:absolute;
+    content: '';
+    left: 0px;
+    bottom: 0;
+    height: 3px;
+    width: 100%;
+    background-color: rgb(0, 183, 255);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: 0.4s linear;
+
+}
+
+nav ul li a:hover::before{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+nav ul li a:hover{
+    background-color: rgb(0, 132, 255);
+    transition: 1s;
+}
+
+
+.content {
+    padding: 16px;
+
+}
+  
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+  
+.sticky + .content {
+    padding-top: 60px;
+}
+
+footer{
+    background-color: rgb(12, 0, 57);
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.5);
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100px;
+}
+
+.footer-section{
+    /* Make this section occupy the remaining vertical space */
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+}
+.editors p{
+    margin-top: 20px;
+    padding-left: 250px;
+    text-align: center;
+    
+}
+
+.editors a{
+    padding: 0;
+    
+} 
+
+
+.logo-icon img{
+    margin-top: -40px;
+    margin-left: 50px;
+    width: 230px;
+    height: 230px;
+}
+
+.backtoTop{
+    width: 40px;
+    height: 40px;
+    margin-left: -15px;
+    margin-bottom: -50px;
+    padding: 50px;
+    transition: transform .2s; /* Animation */
+  
+}
+
+.backtoTop:hover{
+    transform: scale(1.3);
+}
+
